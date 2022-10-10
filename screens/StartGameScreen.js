@@ -5,7 +5,7 @@ import Input from '../components/Input'
 import StartGame from '../components/StartGameCard'
 import color from '../constant/color'
 
-const StartGameScreen = () => {
+const StartGameScreen = ({ onStartHandler }) => {
 
     const [inputvalue, setInputvalue] = useState("00");
     const [comfirmed, setComfirmed] = useState(false);
@@ -59,7 +59,7 @@ const StartGameScreen = () => {
                         </View>
                     </View>
                 </Card>
-                {comfirmed ? <StartGame fianlvalue={fianlvalue} /> : ""}
+                {comfirmed ? <StartGame fianlvalue={fianlvalue} onStartHandler={onStartHandler} /> : ""}
             </View>
         </TouchableWithoutFeedback>
     )

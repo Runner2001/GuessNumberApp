@@ -2,14 +2,14 @@ import React from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
 import color from '../constant/color'
 
-const StartGame = ({ fianlvalue }) => {
+const StartGame = ({ fianlvalue, onStartHandler }) => {
     return (
         <View style={styles.container}>
             <Text style={{ marginBottom: 16 }}>
                 Your Input Value: <Text style={{ fontSize: 18, fontWeight: '500' }}>{fianlvalue}</Text>
             </Text>
             <View style={styles.standardButton}>
-                <Button title='Start Game' color={color.primary} />
+                <Button title='Start Game' color={color.primary} onPress={() => onStartHandler(fianlvalue)} />
             </View>
         </View>
     )
