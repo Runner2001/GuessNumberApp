@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Alert, Button, StyleSheet, Text, View } from 'react-native'
 import color from '../constant/color'
+import { Ionicons } from '@expo/vector-icons'
 
 const generatRandom = (min, max, exlude) => {
     min = Math.ceil(min)
@@ -46,9 +47,12 @@ const GameScreen = ({ userValue, gameOverHandler }) => {
     return (
         <View style={styles.screen}>
             <View style={styles.container}>
-                <Text style={{ marginBottom: 16 }}>
-                    Oppunents Guess Value
-                </Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 16 }}>
+                    <Text style={{ marginRight: 8 }}>
+                        Oppunents Guess Value
+                    </Text>
+                    <Ionicons name="game-controller" size={24} color={color.danger} />
+                </View>
                 <Text style={{ fontSize: 32, fontWeight: '500', }}>{currentGuess}</Text>
                 <View style={styles.buttonGroup}>
                     <View style={styles.standardButton}>

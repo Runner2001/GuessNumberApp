@@ -10,9 +10,9 @@ import AppLoading from 'expo-app-loading';
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    'montserrat': require('./assets/fonts/Montserrat-Regular.ttf'),
-    'montserrat-medium': require('./assets/fonts/Montserrat-Medium.ttf'),
-    'montserrat-bold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
+    'regular': require('./assets/fonts/Montserrat-Regular.ttf'),
+    'medium': require('./assets/fonts/Montserrat-Medium.ttf'),
+    'bold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
   });
 }
 
